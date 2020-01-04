@@ -1,6 +1,7 @@
 # GitCookBook
 Commonly used git bash commands.
 
+```bash
 # diff between current and last version
 git diff HEAD^ HEAD
 git difftool HEAD^ HEAD # only if you configured a diff tool
@@ -24,3 +25,4 @@ git clone <url>
 
 # add README.md
 touch README.md
+```
