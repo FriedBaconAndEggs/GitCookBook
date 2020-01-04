@@ -25,4 +25,7 @@ git clone <url>
 
 # add README.md
 touch README.md
+
+# discard local changes (get back to the last commit)
+git reset --hard
 ```
