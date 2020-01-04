@@ -1,3 +1,6 @@
+# GitCookBook
+Commonly used git bash commands.
+
 # diff between current and last version
 git diff HEAD^ HEAD
 git difftool HEAD^ HEAD # only if you configured a diff tool
@@ -18,3 +21,6 @@ git push
 
 # get remote repo
 git clone <url>
+
+# add README.md
+touch README.md
