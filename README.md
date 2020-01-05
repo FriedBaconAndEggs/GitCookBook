@@ -13,7 +13,7 @@ git commit -m "first commit"
 git remote add <name (usually origin)> <url> # connect to remote
 git push -u origin master # -u is the same as --set-upstream
 
-# simple commit and push
+# global commit and push
 git commit -a -m "<desc>" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git are not affected
 git push
 
