@@ -28,4 +28,11 @@ touch README.md
 
 # discard local changes (get back to the last commit)
 git reset --hard
+
+# diff local branch with the upstream branch (if you're on the branch)
+git diff @{upstream}
+
+# diff local branch with a remote branch
+git branch -a # show branches
+git diff <remote-tracking branch> <local branch>
 ```
