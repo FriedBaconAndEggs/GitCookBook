@@ -38,4 +38,7 @@ git diff <remote-tracking branch> <local branch>
 
 # remove local untracked files from the current Git branch
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
+
+# view file history
+git log -p --follow <filename> # --follow - include renames, -p also diff
 ```
