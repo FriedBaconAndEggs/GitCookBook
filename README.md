@@ -2,9 +2,12 @@
 Commonly used git bash commands.
 
 ```bash
-# diff between current and last version
-git diff HEAD^ HEAD
-git difftool HEAD^ HEAD # only if you configured a diff tool
+# diff
+git diff HEAD^ HEAD # diff between current and last version
+git difftool HEAD^ HEAD # diff between current and last version - only if you configured a diff tool
+git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
+git branch -a # show branches
+git diff <remote-tracking branch> <local branch> [<file>] # diff local branch with a remote branch
 
 # add existing local repository to the remote one
 git init # create .git stuff
@@ -28,13 +31,6 @@ touch README.md
 
 # discard local changes (get back to the last commit)
 git reset --hard
-
-# diff local branch with the upstream branch (if you're on the branch)
-git diff @{upstream}
-
-# diff local branch with a remote branch
-git branch -a # show branches
-git diff <remote-tracking branch> <local branch>
 
 # remove local untracked files from the current Git branch
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
