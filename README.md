@@ -9,6 +9,9 @@ git diff @{upstream} # diff local branch with the upstream branch (if you're on 
 git branch -a # show branches
 git diff <remote-tracking branch> <local branch> [<file>] # diff local branch with a remote branch
 
+# view file history
+git log -p --follow <filename> # --follow - include renames, -p also diff
+
 # add existing local repository to the remote one
 git init # create .git stuff
 git add . # add all the files
@@ -34,7 +37,4 @@ git reset --hard
 
 # remove local untracked files from the current Git branch
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
-
-# view file history
-git log -p --follow <filename> # --follow - include renames, -p also diff
 ```
