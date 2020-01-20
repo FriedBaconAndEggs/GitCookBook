@@ -37,4 +37,7 @@ git reset --hard
 
 # remove local untracked files from the current Git branch
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
+
+# view staged and non-staged files
+git status
 ```
