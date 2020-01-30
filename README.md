@@ -32,8 +32,11 @@ git clone <url>
 # add README.md
 touch README.md
 
-# discard local changes (get back to the last commit)
+# discard all local changes (get back to the last commit)
 git reset --hard
+
+# reset a single file
+git checkout <file>
 
 # remove local untracked files from the current Git branch
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
