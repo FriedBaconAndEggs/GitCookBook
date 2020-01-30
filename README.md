@@ -12,6 +12,9 @@ git diff <remote-tracking branch> <local branch> [<file>] # diff local branch wi
 # view file history
 git log -p --follow <filename> # --follow - include renames, -p also diff
 
+# view file in head revision.
+git show HEAD:<file>
+
 # add existing local repository to the remote one
 git init # create .git stuff
 git add . # add all the files
