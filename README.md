@@ -54,7 +54,12 @@ git checkout -b newBranch # create a new branch from the active one and switch t
 git commit -a -m "newBranch finished and tested."
 git push -u origin newBranch # push the newBranch branch to the remote repository and set it as upstream
 git checkout master # return to the master branch
+# Note: above command doesn't set the corresponding remote as upstream. For example, git diff @{upstream}
+# now compares HEAD with remotes/origin/newBranch instead of remotes/origin/master until you switch upstream
+git branch -u remotes/origin/master # set remotes/origin/master as upstream
 git merge newBranch # merge the newBranch branch back into the master branch
+git commit -a -m "merged with newBranch" # you need to commit if the merge was fast-forward
+git push -u origin master # set remotes/origin/master as upstream (if not set yet) and push
 git push origin --delete newBranch # delete the remote branch
 git branch -d newBranch # delete the local branch because there's no further need for it
 git log --all --decorate --oneline --graph # show branching graph
