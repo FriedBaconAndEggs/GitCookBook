@@ -6,7 +6,7 @@ Commonly used git bash commands.
 git diff HEAD^ HEAD # diff between current and last version
 git difftool HEAD^ HEAD # diff between current and last version - only if you configured a diff tool
 git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
-git branch -a # show branches
+git branch -a # show all branches
 git diff <remote-tracking branch> <local branch> [<file>] # diff local branch with a remote branch
 
 # view file history
@@ -46,4 +46,15 @@ git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, 
 
 # view staged and non-staged files
 git status
+
+# simple branching and merging
+git branch --all # show all branches
+git checkout -b newBranch # create a new branch from the active one and switch to it at the same time
+git commit -a -m "newBranch finished and tested."
+git push -u origin newBranch # push the newBranch branch to the remote repository and set it as upstream
+git checkout master # return to the master branch
+git merge newBranch # merge the newBranch branch back into the master branch
+git push origin --delete newBranch # delete the remote branch
+git branch -d newBranch # delete the local branch because there's no further need for it
+git log --all --decorate --oneline --graph # show branching graph
 ```
