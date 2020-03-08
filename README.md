@@ -63,4 +63,8 @@ git push -u origin master # set remotes/origin/master as upstream (if not set ye
 git push origin --delete newBranch # delete the remote branch
 git branch -d newBranch # delete the local branch because there's no further need for it
 git log --all --decorate --oneline --graph # show branching graph
+
+# change user name and email
+git config --global user.name 'Anonymous'
+git config --global user.email '<>'
 ```
