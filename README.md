@@ -45,7 +45,7 @@ git checkout <file>
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
 
 # remove files from index
-git rm -r --cached . # -r - recursive removal, --cached - only index (not working tree), add -n to preview removal first.
+git rm -r --cached . # -r - recursive removal, --cached - only index (without working tree), add -n to preview removal first.
 
 # view staged and non-staged files
 git status
