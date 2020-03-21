@@ -1,5 +1,5 @@
 # GitCookBook
-Commonly used git bash commands.
+Most commonly used git commands.
 
 ```bash
 # diff
@@ -38,8 +38,9 @@ touch README.md
 # discard all local changes (get back to the last commit)
 git reset --hard
 
-# reset a single file
-git checkout <file>
+# reset single file to the latest commit
+git checkout <file> # in local repo
+git checkout origin/master -- path/to/file # in remote repo
 
 # remove local untracked files
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
