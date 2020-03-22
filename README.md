@@ -71,4 +71,11 @@ git log --all --decorate --oneline --graph # show branching graph
 # change user name and email
 git config --global user.name 'Anonymous'
 git config --global user.email '<>'
+
+# get remote changes
+git fetch # download objects and refs from remote
+git diff HEAD remotes/origin/HEAD # diff local HEAD with just fetched remote HEAD
+git merge remotes/origin/HEAD # merge with what was fetched
+# or just
+git pull # equivalent of git fetch && git merge
 ```
