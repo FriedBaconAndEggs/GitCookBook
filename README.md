@@ -78,4 +78,20 @@ git diff HEAD remotes/origin/HEAD # diff local HEAD with just fetched remote HEA
 git merge remotes/origin/HEAD # merge with what was fetched
 # or just
 git pull # equivalent of git fetch && git merge
+
+# clone repo to non-empty directory
+# Clone just the repository's .git folder (excluding files as they are already in
+# `existing-dir`) into an empty temporary directory
+git clone --no-checkout repo-to-clone existing-dir/existing-dir.tmp # might want --no-hardlinks for cloning local repo
+
+# Move the .git folder to the directory with the files.
+# This makes `existing-dir` a git repo.
+mv existing-dir/existing-dir.tmp/.git existing-dir/
+
+# Delete the temporary directory
+rmdir existing-dir/existing-dir.tmp
+cd existing-dir
+
+# Download existing files
+git checkout
 ```
