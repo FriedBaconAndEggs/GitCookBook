@@ -1,4 +1,4 @@
-# GitCookBook
+# GitCookbook
 Most commonly used git commands.
 
 ```bash
