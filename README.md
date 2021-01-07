@@ -79,7 +79,7 @@ git branch -vv # same as above but local and corresponding upstream remote is pr
 ```
 ### Branching and merging/rebasing/squashing
 ```bash
-git branch -vv # show branches
+git branch -vv # show all branches
 git checkout -b newBranch # create a new branch from the active one and switch to it at the same time
 git commit -a -m "newBranch finished and tested."
 git push -u origin newBranch # push the newBranch branch to the remote repository and set it as upstream
