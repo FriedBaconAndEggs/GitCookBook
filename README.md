@@ -2,24 +2,12 @@
 - [GitCookbook](#GitCookbook)
     * [Recipes](#Recipes)
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         + [View commit history](#View-commit-history)
         + [View file](#View-file)
-=======
->>>>>>> Update README
-=======
-        + [Diff commits or a particular file](#Test-with-spaces)
->>>>>>> Update README
-=======
-        + [View commit history](#View-commit-history)
-        + [View file](#View-file)
->>>>>>> refs/remotes/origin/master
 ## Recipes
 ### Diff commits or a particular file
 ```bash
-git diff HEAD^ HEAD # diff between last version and current 
+git diff HEAD^ HEAD # diff between last version and current
 git difftool HEAD^ HEAD # diff between last version and current - only if you configured a diff tool
 git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
 git diff <remote-tracking branch> <local branch> [<file>] # diff remote file with the local one
@@ -130,66 +118,4 @@ rmdir existing-dir/existing-dir.tmp
 cd existing-dir
 # Download existing files
 git checkout
-<<<<<<< HEAD
-<<<<<<< HEAD
 ```
-=======
-```
-### Test with spaces
-
-- [Heading](#heading)
-  * [Sub-heading](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
-
-
-# Heading levels
-
-> This is a fixture to test heading levels
-
-<!-- toc -->
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
->>>>>>> Update README
-=======
-```
->>>>>>> refs/remotes/origin/master
