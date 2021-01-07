@@ -2,9 +2,9 @@
 ## Table of contents
 - [GitCookbook](#GitCookbook)
     * [Table of contents](#Table-of-contents)
+    * [Recipes](#Recipes)
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
         + [View commit history](#View-commit-history)
-            - [Test](#Test)
         + [View file](#View-file)
         + [Bring a local folder to a remote repo](#Bring-a-local-folder-to-a-remote-repo)
         + [Commit and push](#Commit-and-push)
@@ -20,7 +20,9 @@
         + [Branching and merging/rebasing/squashing](#Branching-and-merging/rebasing/squashing)
         + [Change user name and email](#Change-user-name-and-email)
         + [Get remote changes](#Get-remote-changes)
-        + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)### Diff commits or a particular file
+        + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
+## Recipes
+### Diff commits or a particular file
 ```bash
 git diff HEAD^ HEAD # diff between last version and current
 git difftool HEAD^ HEAD # diff between last version and current - only if you configured a diff tool
@@ -28,7 +30,6 @@ git diff @{upstream} # diff local branch with the upstream branch (if you're on 
 git diff <remote-tracking branch> <local branch> [<file>] # diff remote file with the local one
 ```
 ### View commit history
-#### Test
 ```bash
 git log --oneline # show commits in a concise form
 git log --all --decorate --oneline --graph # show commit graph including branches (a dog - woof!)

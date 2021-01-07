@@ -32,7 +32,7 @@ let parseTocText readmeLines =
         |> Array.map (fun x -> x.Value)
 
 let updateToc (readme : string) (newTocText : string) =
-    Regex.Replace(readme, @"(?ms)(?<=#+\s+Table of contents\s*\r?\n).+?(?=^\s*#+\s*\w+)", newTocText)
+    Regex.Replace(readme, @"(?ms)(?<=#+\s+Table of contents\s*\r?\n).+?(?=\r?\n^\s*#+\s*\w+)", newTocText)
 
 let removeCodeBlocks str =
     Regex.Replace(str, @"(?ms)^```.+?```\r?$", "")
