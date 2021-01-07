@@ -21,6 +21,7 @@
         + [Change user name and email](#Change-user-name-and-email)
         + [Get remote changes](#Get-remote-changes)
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
+        + [Disable push to fork remote](#Disable-push-to-fork-remote)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -139,4 +140,10 @@ mv existing-dir/existing-dir.tmp/.git existing-dir/ # move the .git folder to th
 rmdir existing-dir/existing-dir.tmp # delete the temporary directory
 cd existing-dir
 git checkout # download existing files
+```
+### Disable push to fork remote
+```bash
+git remote set-url --push upstream no_push # set the push url of upstream remote to "no_push",
+                                           # thus preventing unwanted pushing
+                                           # Note: 'upstream' is a common name for the fork source
 ```
