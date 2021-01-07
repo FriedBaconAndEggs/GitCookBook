@@ -38,7 +38,8 @@ git log --all --decorate --oneline --graph # show commit graph including branche
 ```bash
 git show HEAD:<file> # view file in head revision
 git show origin/master:<file> # view file in remote branch
-git log -p --follow <filename> # show file history through the commit history; --follow - include renames, -p - also diff
+git log -p --follow <filename> # show file history through the commit history;
+                               # --follow - include renames, -p - also diff
 ```
 ### Bring a local folder to a remote repo
 ```bash
@@ -51,7 +52,8 @@ git push -u origin master # set remote branch and push changes (-u is the same a
 ### Commit and push
 ```bash
 git add <untracked files> # add untracked files - 'commit -a' doesn't stage new files
-git commit -am "message" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
+git commit -am "message" # -a == -all - automatically stage files that have been modified and deleted,
+                         # but new files you have not told Git about are not affected
 git push
 ```
 ### Untrack folder
@@ -77,11 +79,13 @@ git checkout <usually origin>/<branch> -- <file> # in remote repo
 ```
 ### Remove untracked files from working tree
 ```bash
-git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
+git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored,
+                   # add -n to see which files will be deleted
 ```
 ### Untrack files after updating .gitignore
 ```bash
-git rm -r --cached . # remove files from index; -r - recursive removal, --cached - only index (without working tree), add -n to preview removal first.
+git rm -r --cached . # remove files from index; -r - recursive removal,
+                     # --cached - only index (without working tree), add -n to preview removal first.
 ```
 ### View staged and non-staged files
 ```bash
