@@ -84,8 +84,14 @@ git checkout -b newBranch # create a new branch from the active one and switch t
 git commit -a -m "newBranch finished and tested."
 git push -u origin newBranch # push the newBranch branch to the remote repository and set it as upstream
 git checkout master # return to the master branch
+# merge
 git merge newBranch # merge the newBranch branch back into the master branch
-git commit -a -m "merged with newBranch" # you need to commit if the merge was fast-forward
+git commit -m "merged with newBranch" # you need to commit if the merge was fast-forward
+# or merge --squash
+git merge --squash newBranch # squash commits in newBranch into a single commit
+git commit -m "squashed commit"
+# or rebase
+git rebase newBranch # linearize the commit history
 git push -u origin master # set remotes/origin/master as upstream (if not set yet) and push
 git push origin --delete newBranch # delete the remote branch
 git branch -d newBranch # delete the local branch because there's no further need for it
@@ -104,18 +110,12 @@ git merge [remotes/origin/HEAD] # merge with what was fetched
 # or just
 git pull # equivalent of git fetch and git merge
 ```
+### Clone repo to non-empty directory
 ```bash
-
-# clone repo to non-empty directory
-# Clone just the repository's .git folder (excluding files as they are already in
-# `existing-dir`) into an empty temporary directory
-git clone --no-checkout repo-to-clone existing-dir/existing-dir.tmp # might want --no-hardlinks for cloning local repo
-# Move the .git folder to the directory with the files.
-# This makes `existing-dir` a git repo.
-mv existing-dir/existing-dir.tmp/.git existing-dir/
-# Delete the temporary directory
-rmdir existing-dir/existing-dir.tmp
+git clone --no-checkout repo-to-clone existing-dir/existing-dir.tmp # clone remote repo to tmp folder
+mv existing-dir/existing-dir.tmp/.git existing-dir/ # move the .git folder to the directory with the files
+                                                    # - this makes `existing-dir` a git repo.
+rmdir existing-dir/existing-dir.tmp # delete the temporary directory
 cd existing-dir
-# Download existing files
-git checkout
+git checkout # download existing files
 ```
