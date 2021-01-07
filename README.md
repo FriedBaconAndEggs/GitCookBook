@@ -55,12 +55,13 @@ git reset HEAD^
 ### Reset single file to the latest commit from another branch
 ```bash
 git checkout <branch> -- <file> # in local repo
-git checkout <usually origin>/<branch> -- path/to/file # in remote repo
+git checkout <usually origin>/<branch> -- <file> # in remote repo
+```
+### Remove untracked files from working tree
+```bash
+git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
 ```
 ```bash
-# remove local untracked files
-git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
-
 # remove files from index
 git rm -r --cached . # -r - recursive removal, --cached - only index (without working tree), add -n to preview removal first.
 
