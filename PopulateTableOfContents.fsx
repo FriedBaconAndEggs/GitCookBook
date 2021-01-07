@@ -41,8 +41,8 @@ let readmeText = File.ReadAllText "README.md"
 
 readmeText
     |> removeCodeBlocks
-    |> (fun s -> Regex.Split(s, Environment.NewLine))
+    |> fun s -> Regex.Split(s, Environment.NewLine)
     |> parseTocText
     |> String.concat Environment.NewLine
     |> updateToc readmeText
-    |> printfn "%s"
+    |> fun t -> File.WriteAllText("README.md", t)
