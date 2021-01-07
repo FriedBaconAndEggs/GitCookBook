@@ -9,11 +9,18 @@ let (|Heading|_|) i =
   else
     None
 
+let mark =
+    fun nesting ->
+        match nesting with
+            | 2 -> "*"
+            | 3 -> "+"
+            | _ -> "-"
+
 let parseHeading str =
     match str with
         | Heading (nesting, value) -> 
-            Some (String.replicate (nesting - 1) "\t" + 
-                sprintf "- [%s](#" value +
+            Some (String.replicate (nesting - 1) "    " + 
+                sprintf "%s [%s](#" (mark nesting) value +
                 Regex.Replace (value, @"\s", "-") +
                 ")")
         | _ -> None

@@ -1,28 +1,26 @@
 # GitCookbook
 ## Table of contents
 - [GitCookbook](#GitCookbook)
-        - [Table of contents](#Table-of-contents)
-        - [Recipes](#Recipes)
-                - [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
-                - [View commit history](#View-commit-history)
-                        - [Test](#Test)
-                - [View file](#View-file)
-                - [Bring a local folder to a remote repo](#Bring-a-local-folder-to-a-remote-repo)
-                - [Commit and push](#Commit-and-push)
-                - [Untrack folder](#Untrack-folder)
-                - [Get remote repo](#Get-remote-repo)
-                - [Discard all local changes](#Discard-all-local-changes)
-                - [Remove last local commit](#Remove-last-local-commit)
-                - [Reset single file to the latest commit from another branch](#Reset-single-file-to-the-latest-commit-from-another-branch)
-                - [Remove untracked files from working tree](#Remove-untracked-files-from-working-tree)
-                - [Untrack files after updating .gitignore](#Untrack-files-after-updating-.gitignore)
-                - [View staged and non-staged files](#View-staged-and-non-staged-files)
-                - [View branches](#View-branches)
-                - [Branching and merging/rebasing/squashing](#Branching-and-merging/rebasing/squashing)
-                - [Change user name and email](#Change-user-name-and-email)
-                - [Get remote changes](#Get-remote-changes)
-                - [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)## Recipes
-### Diff commits or a particular file
+    * [Table of contents](#Table-of-contents)
+        + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
+        + [View commit history](#View-commit-history)
+            - [Test](#Test)
+        + [View file](#View-file)
+        + [Bring a local folder to a remote repo](#Bring-a-local-folder-to-a-remote-repo)
+        + [Commit and push](#Commit-and-push)
+        + [Untrack folder](#Untrack-folder)
+        + [Get remote repo](#Get-remote-repo)
+        + [Discard all local changes](#Discard-all-local-changes)
+        + [Remove last local commit](#Remove-last-local-commit)
+        + [Reset single file to the latest commit from another branch](#Reset-single-file-to-the-latest-commit-from-another-branch)
+        + [Remove untracked files from working tree](#Remove-untracked-files-from-working-tree)
+        + [Untrack files after updating .gitignore](#Untrack-files-after-updating-.gitignore)
+        + [View staged and non-staged files](#View-staged-and-non-staged-files)
+        + [View branches](#View-branches)
+        + [Branching and merging/rebasing/squashing](#Branching-and-merging/rebasing/squashing)
+        + [Change user name and email](#Change-user-name-and-email)
+        + [Get remote changes](#Get-remote-changes)
+        + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)### Diff commits or a particular file
 ```bash
 git diff HEAD^ HEAD # diff between last version and current
 git difftool HEAD^ HEAD # diff between last version and current - only if you configured a diff tool
