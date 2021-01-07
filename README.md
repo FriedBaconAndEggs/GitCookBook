@@ -48,13 +48,16 @@ git clone https://github.com/<user/organization>/<repo-name>.git
 ```bash
 git reset --hard # get back to the last commit
 ```
-
-
+### Remove last local commit
 ```bash
-# reset single file to the latest commit
-git checkout <file> # in local repo
-git checkout origin/master -- path/to/file # in remote repo
-
+git reset HEAD^
+```
+### Reset single file to the latest commit from another branch
+```bash
+git checkout <branch> -- <file> # in local repo
+git checkout <usually origin>/<branch> -- path/to/file # in remote repo
+```
+```bash
 # remove local untracked files
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored, add -n to see which files will be deleted
 
