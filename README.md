@@ -1,4 +1,6 @@
 # GitCookbook
+- [Heading](#GitCookbook)
+  * [Sub-sub-heading](#(Diff commits or a particular file))
 ### Diff commits or a particular file
 ```bash
 git diff HEAD^ HEAD # diff between last version and current
