@@ -97,7 +97,6 @@ git config --global user.name 'Anonymous'
 git config --global user.email '<>'
 ```
 ```bash
-
 # get remote changes
 git fetch # download objects and refs from remote
 git diff HEAD remotes/origin/HEAD # diff local HEAD with just fetched remote HEAD
