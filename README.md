@@ -84,8 +84,14 @@ git checkout -b newBranch # create a new branch from the active one and switch t
 git commit -a -m "newBranch finished and tested."
 git push -u origin newBranch # push the newBranch branch to the remote repository and set it as upstream
 git checkout master # return to the master branch
+# merge
 git merge newBranch # merge the newBranch branch back into the master branch
-git commit -a -m "merged with newBranch" # you need to commit if the merge was fast-forward
+git commit -m "merged with newBranch" # you need to commit if the merge was fast-forward
+# or merge --squash
+git merge --squash newBranch # squash commits in newBranch into a single commit
+git commit -m "squashed commit"
+# or rebase
+git rebase newBranch # linearize the commit history
 git push -u origin master # set remotes/origin/master as upstream (if not set yet) and push
 git push origin --delete newBranch # delete the remote branch
 git branch -d newBranch # delete the local branch because there's no further need for it
