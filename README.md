@@ -105,7 +105,6 @@ git merge [remotes/origin/HEAD] # merge with what was fetched
 git pull # equivalent of git fetch and git merge
 ```
 ```bash
-
 # clone repo to non-empty directory
 # Clone just the repository's .git folder (excluding files as they are already in
 # `existing-dir`) into an empty temporary directory
