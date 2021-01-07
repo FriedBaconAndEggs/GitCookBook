@@ -1,7 +1,9 @@
 # GitCookbook
 - [GitCookbook](#GitCookbook)
     * [Recipes](#Recipes)
-        + [Diff commits or a particular file](#Diff%20commits%20or%20a%20particular%20file)
+        + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
+        + [View commit history](#View-commit-history)
+        + [View file](#View-file)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -20,29 +22,35 @@ git log --all --decorate --oneline --graph # show commit graph including branche
 git show HEAD:<file> # view file in head revision.
 git log -p --follow <filename> # show file history through the commit history; --follow - include renames, -p - also diff
 ```
+### Bring a local folder to a remote repo
+```bash
+git init # create .git stuff
+git add . # add all the files
+git commit -m "First commit"
+git remote add <name (usually origin)> <url> # connect to remote
+git push -u origin master # set remote branch and push changes (-u is the same as --set-upstream)
+```
+### Commit and push
+```bash
+git add <untracked files> # add untracked files - 'commit -a' doesn't stage new files
+git commit -am "message" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
+git push
+```
+### Untrack folder
+```bash
+# remove hidden .git folder
+```
+### Get remote repo
+```bash
+git clone https://github.com/<user/organization>/<repo-name>.git
+```
+### Discard all local changes
+```bash
+git reset --hard # get back to the last commit
+```
 
 
 ```bash
-# add existing local repository to the remote one
-git init # create .git stuff
-git add . # add all the files
-git commit -m "first commit"
-git remote add <name (usually origin)> <url> # connect to remote
-git push -u origin master # -u is the same as --set-upstream
-
-# global commit and push
-git commit -a -m "<desc>" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
-git push
-
-# untrack
-# remove hidden .git folder
-
-# get remote repo
-git clone <url>
-
-# discard all local changes (get back to the last commit)
-git reset --hard
-
 # reset single file to the latest commit
 git checkout <file> # in local repo
 git checkout origin/master -- path/to/file # in remote repo
@@ -97,57 +105,3 @@ cd existing-dir
 # Download existing files
 git checkout
 ```
-
-
-- [Heading](#heading)
-  * [Sub-heading](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
-
-
-# Heading levels
-
-> This is a fixture to test heading levels
-
-<!-- toc -->
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
