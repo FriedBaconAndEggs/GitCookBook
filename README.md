@@ -2,8 +2,11 @@
 - [GitCookbook](#GitCookbook)
     * [Recipes](#Recipes)
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
+<<<<<<< HEAD
         + [View commit history](#View-commit-history)
         + [View file](#View-file)
+=======
+>>>>>>> Update README
 ## Recipes
 ### Diff commits or a particular file
 ```bash
