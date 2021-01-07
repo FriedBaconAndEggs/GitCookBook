@@ -1,7 +1,7 @@
 # GitCookbook
 - [GitCookbook](#GitCookbook)
     * [Recipes](#Recipes)
-        + [Diff commits or a particular file](#Diff%20commits%20or%20a%20particular%20file)
+        + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
