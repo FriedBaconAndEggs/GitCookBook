@@ -2,6 +2,7 @@
 - [GitCookbook](#GitCookbook)
     * [Recipes](#Recipes)
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
+        + [Diff commits or a particular file](#Test-with-spaces)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -97,7 +98,7 @@ cd existing-dir
 # Download existing files
 git checkout
 ```
-
+### Test with spaces
 
 - [Heading](#heading)
   * [Sub-heading](#sub-heading)
