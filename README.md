@@ -4,6 +4,7 @@
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         + [View commit history](#View-commit-history)
         + [View file](#View-file)
 =======
@@ -11,6 +12,10 @@
 =======
         + [Diff commits or a particular file](#Test-with-spaces)
 >>>>>>> Update README
+=======
+        + [View commit history](#View-commit-history)
+        + [View file](#View-file)
+>>>>>>> refs/remotes/origin/master
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -126,6 +131,7 @@ cd existing-dir
 # Download existing files
 git checkout
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 =======
 ```
@@ -184,3 +190,6 @@ This is an h2 heading
 
 This is an h3 heading
 >>>>>>> Update README
+=======
+```
+>>>>>>> refs/remotes/origin/master
