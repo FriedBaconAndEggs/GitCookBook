@@ -1,9 +1,12 @@
 # GitCookbook
+## Table of contents
 - [GitCookbook](#GitCookbook)
+    * [Table of contents](#Table-of-contents)
     * [Recipes](#Recipes)
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
         + [View commit history](#View-commit-history)
         + [View file](#View-file)
+            - [Test](#Test)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -13,6 +16,7 @@ git diff @{upstream} # diff local branch with the upstream branch (if you're on 
 git diff <remote-tracking branch> <local branch> [<file>] # diff remote file with the local one
 ```
 ### View commit history
+#### Test
 ```bash
 git log --oneline # show commits in a concise form
 git log --all --decorate --oneline --graph # show commit graph including branches (a dog - woof!)
