@@ -96,13 +96,15 @@ git log --all --decorate --oneline --graph # show the branch graph
 git config --global user.name 'Anonymous'
 git config --global user.email '<>'
 ```
+### Get remote changes
 ```bash
-# get remote changes
 git fetch # download objects and refs from remote
 git diff HEAD remotes/origin/HEAD # diff local HEAD with just fetched remote HEAD
-git merge remotes/origin/HEAD # merge with what was fetched
+git merge [remotes/origin/HEAD] # merge with what was fetched
 # or just
 git pull # equivalent of git fetch and git merge
+```
+```bash
 
 # clone repo to non-empty directory
 # Clone just the repository's .git folder (excluding files as they are already in
