@@ -6,7 +6,7 @@
         + [Diff commits or a particular file](#Diff-commits-or-a-particular-file)
         + [View commit history](#View-commit-history)
         + [View file](#View-file)
-        + [Bring a local folder to a remote repo](#Bring-a-local-folder-to-a-remote-repo)
+        + [Bring local folder to a remote repo](#Bring-local-folder-to-a-remote-repo)
         + [Commit and push](#Commit-and-push)
         + [Untrack folder](#Untrack-folder)
         + [Get remote repo](#Get-remote-repo)
@@ -41,7 +41,7 @@ git show origin/master:<file> # view file in remote branch
 git log -p --follow <filename> # show file history through the commit history;
                                # --follow - include renames, -p - also diff
 ```
-### Bring a local folder to a remote repo
+### Bring local folder to a remote repo
 ```bash
 git init # create .git stuff
 git add . # add all the files
