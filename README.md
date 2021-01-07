@@ -1,20 +1,25 @@
 # GitCookbook
 Most commonly used git commands.
+### Diff commits or a particular file
+```bash
+git diff HEAD^ HEAD # diff between last version and current
+git difftool HEAD^ HEAD # diff between last version and current - only if you configured a diff tool
+git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
+git diff <remote-tracking branch> <local branch> [<file>] # diff remote file with the local one
+```
+### View commit history
+```bash
+git log --oneline # show commits in a concise form
+git log --all --decorate --oneline --graph # show commit graph including branches (a dog - woof!)
+```
+### View file
+```bash
+git show HEAD:<file> # view file in head revision.
+git log -p --follow <filename> # show file history through the commit history; --follow - include renames, -p - also diff
+```
+
 
 ```bash
-# diff
-git diff HEAD^ HEAD # diff between current and last version
-git difftool HEAD^ HEAD # diff between current and last version - only if you configured a diff tool
-git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
-git branch -a # show all branches
-git diff <remote-tracking branch> <local branch> [<file>] # diff local branch with a remote branch
-
-# view file history
-git log -p --follow <filename> # --follow - include renames, -p also diff
-
-# view file in head revision.
-git show HEAD:<file>
-
 # add existing local repository to the remote one
 git init # create .git stuff
 git add . # add all the files
@@ -23,7 +28,7 @@ git remote add <name (usually origin)> <url> # connect to remote
 git push -u origin master # -u is the same as --set-upstream
 
 # global commit and push
-git commit -a -m "<desc>" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git are not affected
+git commit -a -m "<desc>" # -a == -all - automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
 git push
 
 # untrack
@@ -31,9 +36,6 @@ git push
 
 # get remote repo
 git clone <url>
-
-# add README.md
-touch README.md
 
 # discard all local changes (get back to the last commit)
 git reset --hard
