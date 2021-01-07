@@ -14,7 +14,7 @@
 ## Recipes
 ### Diff commits or a particular file
 ```bash
-git diff HEAD^ HEAD # diff between last version and current
+git diff HEAD^ HEAD # diff between last version and current 
 git difftool HEAD^ HEAD # diff between last version and current - only if you configured a diff tool
 git diff @{upstream} # diff local branch with the upstream branch (if you're on the branch)
 git diff <remote-tracking branch> <local branch> [<file>] # diff remote file with the local one
