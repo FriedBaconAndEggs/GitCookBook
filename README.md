@@ -14,10 +14,10 @@
         + [Remove last local commit](#Remove-last-local-commit)
         + [Reset single file to the latest commit from another branch](#Reset-single-file-to-the-latest-commit-from-another-branch)
         + [Remove untracked files from working tree](#Remove-untracked-files-from-working-tree)
-        + [Untrack files after updating .gitignore](#Untrack-files-after-updating-.gitignore)
+        + [Untrack files after updating gitignore](#Untrack-files-after-updating-gitignore)
         + [View staged and non-staged files](#View-staged-and-non-staged-files)
         + [View branches](#View-branches)
-        + [Branch and merge/rebase/squash](#Branch-and-merge/rebase/squash)
+        + [Branch and merge rebase or squash](#Branch-and-merge-rebase-or-squash)
         + [Change user name and email](#Change-user-name-and-email)
         + [Get remote changes](#Get-remote-changes)
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
@@ -84,7 +84,7 @@ git checkout <usually origin>/<branch> -- <file> # in remote repo
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored,
                    # add -n to see which files will be deleted
 ```
-### Untrack files after updating .gitignore
+### Untrack files after updating gitignore
 ```bash
 git rm -r --cached . # remove files from index; -r - recursive removal,
                      # --cached - only index (without working tree), add -n to preview removal first.
@@ -100,7 +100,7 @@ git branch -v # show local branches along with latest commit
 git branch --all # show all branches (local and remote)
 git branch -vv # same as above but local and corresponding upstream remote is printed in one line
 ```
-### Branch and merge/rebase/squash
+### Branch and merge rebase or squash
 ```bash
 git branch -vv # show all branches
 git checkout -b newBranch # create a new branch from the active one and switch to it at the same time
