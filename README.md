@@ -14,14 +14,15 @@
         + [Remove last local commit](#Remove-last-local-commit)
         + [Reset single file to the latest commit from another branch](#Reset-single-file-to-the-latest-commit-from-another-branch)
         + [Remove untracked files from working tree](#Remove-untracked-files-from-working-tree)
-        + [Untrack files after updating .gitignore](#Untrack-files-after-updating-.gitignore)
+        + [Untrack files after updating gitignore](#Untrack-files-after-updating-gitignore)
         + [View staged and non-staged files](#View-staged-and-non-staged-files)
         + [View branches](#View-branches)
-        + [Branching and merging/rebasing/squashing](#Branching-and-merging/rebasing/squashing)
+        + [Branch and merge rebase or squash](#Branch-and-merge-rebase-or-squash)
         + [Change user name and email](#Change-user-name-and-email)
         + [Get remote changes](#Get-remote-changes)
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
         + [Disable push to fork remote](#Disable-push-to-fork-remote)
+        + [Copy commit](#Copy-commit)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -83,7 +84,7 @@ git checkout <usually origin>/<branch> -- <file> # in remote repo
 git clean -f -d -x # -f files, -d dirs, -x ignored and non-ignored, -X ignored,
                    # add -n to see which files will be deleted
 ```
-### Untrack files after updating .gitignore
+### Untrack files after updating gitignore
 ```bash
 git rm -r --cached . # remove files from index; -r - recursive removal,
                      # --cached - only index (without working tree), add -n to preview removal first.
@@ -97,9 +98,9 @@ git status
 git branch # show local branches
 git branch -v # show local branches along with latest commit
 git branch --all # show all branches (local and remote)
-git branch -vv # same as above but local and corresponding upstream remote is printed on one line
+git branch -vv # same as above but local and corresponding upstream remote is printed in one line
 ```
-### Branching and merging/rebasing/squashing
+### Branch and merge rebase or squash
 ```bash
 git branch -vv # show all branches
 git checkout -b newBranch # create a new branch from the active one and switch to it at the same time
@@ -146,4 +147,11 @@ git checkout # download existing files
 git remote set-url --push upstream no_push # set the push url of upstream remote to "no_push",
                                            # thus preventing unwanted pushing
                                            # Note: 'upstream' is a common name for the fork source
+```
+### Copy commit
+```bash
+git checkout master # make sure you are on the branch you want to apply the commit to
+git cherry-pick branch-with-latest-commit # copy the latest commit from a branch
+                                          # named 'branch-with-latest-commit'
+git cherry-pick <commit hash> # or copy a commit using its hash
 ```
