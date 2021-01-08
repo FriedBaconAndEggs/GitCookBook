@@ -3,28 +3,25 @@ open System.IO;
 open System
 
 let (|Heading|_|) i =
-  let m = Regex.Match (i, @"(?m)^\s*(#)+\s+(.+)\r?$")
-  if m.Success then
-    Some (m.Groups.[1].Captures.Count, m.Groups.[2].Value)
-  else
-    None
+    let m = Regex.Match (i, @"(?m)^\s*(#)+\s+(.+)\r?$")
+    if m.Success then
+        Some (m.Groups.[1].Captures.Count, m.Groups.[2].Value)
+    else
+        None
 
-let mark =
-    fun nesting ->
-        match nesting with
-            | 2 -> "*"
-            | 3 -> "+"
-            | _ -> "-"
+let mark = function
+    | 2 -> "*"
+    | 3 -> "+"
+    | _ -> "-"
 
-let parseHeading str =
-    match str with
-        | Heading (nesting, value) -> 
-            Some (sprintf "%s%s [%s](#%s)"
-                (String.replicate (nesting - 1) "    ")
-                (mark nesting)
-                value
-                (Regex.Replace (value, @"\s", "-")))
-        | _ -> None
+let parseHeading = function
+    | Heading (nesting, value) -> 
+        Some (sprintf "%s%s [%s](#%s)"
+            (String.replicate (nesting - 1) "    ")
+            (mark nesting)
+            value
+            (Regex.Replace (value, @"\s", "-")))
+    | _ -> None
 
 let parseTocText = Array.map parseHeading >> Array.where (fun x -> x.IsSome) >> Array.map (fun x -> x.Value)
 
