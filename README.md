@@ -147,3 +147,4 @@ git remote set-url --push upstream no_push # set the push url of upstream remote
                                            # thus preventing unwanted pushing
                                            # Note: 'upstream' is a common name for the fork source
 ```
+### Copy commit from branch
