@@ -22,6 +22,7 @@
         + [Get remote changes](#Get-remote-changes)
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
         + [Disable push to fork remote](#Disable-push-to-fork-remote)
+        + [Copy commit](#Copy-commit)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -147,4 +148,9 @@ git remote set-url --push upstream no_push # set the push url of upstream remote
                                            # thus preventing unwanted pushing
                                            # Note: 'upstream' is a common name for the fork source
 ```
-### Copy commit from branch
+### Copy commit
+```bash
+git checkout master # make sure you are on the branch you want to apply the commit to
+git cherry-pick branch-with-latest-commit # copy the latest commit from a branch named 'branch-with-latest-commit'
+git cherry-pick <commit hash> # or copy a commit using its hash
+```
