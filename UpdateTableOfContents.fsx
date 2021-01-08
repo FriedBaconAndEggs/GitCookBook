@@ -19,17 +19,14 @@ let mark =
 let parseHeading str =
     match str with
         | Heading (nesting, value) -> 
-            Some (String.replicate (nesting - 1) "    " + 
-                sprintf "%s [%s](#" (mark nesting) value +
-                Regex.Replace (value, @"\s", "-") +
-                ")")
+            Some (sprintf "%s%s [%s](#%s)"
+                (String.replicate (nesting - 1) "    ")
+                (mark nesting)
+                value
+                (Regex.Replace (value, @"\s", "-")))
         | _ -> None
 
-let parseTocText readmeLines =
-    readmeLines
-        |> Array.map parseHeading
-        |> Array.where (fun x -> x.IsSome)
-        |> Array.map (fun x -> x.Value)
+let parseTocText = Array.map parseHeading >> Array.where (fun x -> x.IsSome) >> Array.map (fun x -> x.Value)
 
 let updateToc (readme : string) (newTocText : string) =
     Regex.Replace(readme, @"(?ms)(?<=#+\s+Table of contents\s*\r?\n).+?(?=\r?\n^\s*#+\s*\w+)", newTocText)
