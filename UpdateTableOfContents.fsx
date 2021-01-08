@@ -31,8 +31,7 @@ let parseTocText = Array.map parseHeading >> Array.where (fun x -> x.IsSome) >> 
 let updateToc (readme : string) (newTocText : string) =
     Regex.Replace(readme, @"(?ms)(?<=#+\s+Table of contents\s*\r?\n).+?(?=\r?\n^\s*#+\s*\w+)", newTocText)
 
-let removeCodeBlocks str =
-    Regex.Replace(str, @"(?ms)^```.+?```\r?$", "")
+let removeCodeBlocks str = Regex.Replace(str, @"(?ms)^```.+?```\r?$", "")
 
 let readmeText = File.ReadAllText "README.md"
 
