@@ -17,7 +17,7 @@
         + [Untrack files after updating .gitignore](#Untrack-files-after-updating-.gitignore)
         + [View staged and non-staged files](#View-staged-and-non-staged-files)
         + [View branches](#View-branches)
-        + [Branching and merging/rebasing/squashing](#Branching-and-merging/rebasing/squashing)
+        + [Branch and merge/rebase/squash](#Branch-and-merge/rebase/squash)
         + [Change user name and email](#Change-user-name-and-email)
         + [Get remote changes](#Get-remote-changes)
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
@@ -99,7 +99,7 @@ git branch -v # show local branches along with latest commit
 git branch --all # show all branches (local and remote)
 git branch -vv # same as above but local and corresponding upstream remote is printed on one line
 ```
-### Branching and merging/rebasing/squashing
+### Branch and merge/rebase/squash
 ```bash
 git branch -vv # show all branches
 git checkout -b newBranch # create a new branch from the active one and switch to it at the same time
