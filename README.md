@@ -151,6 +151,7 @@ git remote set-url --push upstream no_push # set the push url of upstream remote
 ### Copy commit
 ```bash
 git checkout master # make sure you are on the branch you want to apply the commit to
-git cherry-pick branch-with-latest-commit # copy the latest commit from a branch named 'branch-with-latest-commit'
+git cherry-pick branch-with-latest-commit # copy the latest commit from a branch
+                                          # named 'branch-with-latest-commit'
 git cherry-pick <commit hash> # or copy a commit using its hash
 ```
