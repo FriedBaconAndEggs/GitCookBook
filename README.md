@@ -97,7 +97,7 @@ git status
 git branch # show local branches
 git branch -v # show local branches along with latest commit
 git branch --all # show all branches (local and remote)
-git branch -vv # same as above but local and corresponding upstream remote is printed on one line
+git branch -vv # same as above but local and corresponding upstream remote is printed in one line
 ```
 ### Branch and merge/rebase/squash
 ```bash
