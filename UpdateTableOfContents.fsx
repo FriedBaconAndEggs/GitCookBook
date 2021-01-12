@@ -23,7 +23,7 @@ let parseHeading = function
             (Regex.Replace (value, @"\s", "-")))
     | _ -> None
 
-let parseTocText = Array.map parseHeading >> Array.where (fun x -> x.IsSome) >> Array.map (fun x -> x.Value)
+let parseTocText = Array.map parseHeading >> Array.choose id
 
 let updateToc (readme : string) (newTocText : string) =
     Regex.Replace(readme, @"(?ms)(?<=#+\s+Table of contents\s*\r?\n).+?(?=\r?\n^\s*#+\s*\w+)", newTocText)
