@@ -23,6 +23,8 @@
         + [Clone repo to non-empty directory](#Clone-repo-to-non-empty-directory)
         + [Disable push to fork remote](#Disable-push-to-fork-remote)
         + [Copy commit](#Copy-commit)
+        + [Revert commits](#Revert-commits)
+        + [Resolve conflicts](#Resolve-conflicts)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -155,3 +157,8 @@ git cherry-pick branch-with-latest-commit # copy the latest commit from a branch
                                           # named 'branch-with-latest-commit'
 git cherry-pick <commit hash> # or copy a commit using its hash
 ```
+### Revert commits
+TBD
+
+### Resolve conflicts
+TBD
