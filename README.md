@@ -161,9 +161,33 @@ git cherry-pick <commit hash> # or copy a commit using its hash
 TBD
 
 ### Resolve conflicts
-TBD
+```bash
+# resolve a conflict with your own version
+git checkout HEAD -- <filename> # simply checkout a conflicting file from HEAD
+# or
+git checkout --ours -- <filename> # works the same
+# Warning: when rebasing --ours and --theirs are swapped!
+
+# resolve conflict with their version
+git checkout their-branch -- <filename> # checkout a conflicting file from the their-branch branch
+# or
+git checkout --theirs -- <filename> # accept an incoming file
+git add <filename> # mark as resolved
+```
 
 ### Modify the most recent commit
+```bash
+git add module0.fs module1.fs
+git commit -m 'Add three modules'
+# whoops! Forgot to add module2.fs
+git add module2.fs
+git commit --amend -m 'Add 3 modules' # create a brand new commit with the new ref
+# or
+git commit --amend --no-edit # amendment without changing its commit message
+# Warning: never amend public comments. Amendment is a means of rewriting history.
+```
+
+### Switch to an old commit
 ```bash
 
 ```
