@@ -25,6 +25,8 @@
         + [Copy commit](#Copy-commit)
         + [Revert commits](#Revert-commits)
         + [Resolve conflicts](#Resolve-conflicts)
+        + [Modify the most recent commit](#Modify-the-most-recent-commit)
+        + [Switch to an old commit](#Switch-to-an-old-commit)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -189,5 +191,8 @@ git commit --amend --no-edit # amendment without changing its commit message
 
 ### Switch to an old commit
 ```bash
-
+git checkout <commit> # switch to an old commit
+git switch -c <new-branch-name> # create a new branch to retain commits you create
+# or
+git switch - # undo switching
 ```
