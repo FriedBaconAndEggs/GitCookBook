@@ -27,6 +27,7 @@
         + [Resolve conflicts](#Resolve-conflicts)
         + [Modify the most recent commit](#Modify-the-most-recent-commit)
         + [Switch to an old commit](#Switch-to-an-old-commit)
+        + [Delete orphaned remote branch pointer](#Delete-orphaned-remote-branch-pointer)
 ## Recipes
 ### Diff commits or a particular file
 ```bash
@@ -203,4 +204,9 @@ git checkout <commit> # switch to an old commit
 git switch -c <new-branch-name> # create a new branch to retain commits you create
 # or
 git switch - # undo switching
+```
+
+### Delete orphaned remote branch pointer
+```bash
+git branch -r -d origin/<non-existing-remote-branch> # -r - act on remote-tracking branches, -d delete fully merged branch
 ```
