@@ -209,5 +209,5 @@ git switch - # undo switching
 ### Delete orphaned remote branch pointer
 ```bash
 git branch -r -d origin/<non-existing-remote-branch> # -r - act on remote-tracking branches,
-                                                     # -d delete fully merged branch
+                                                     # -d - delete fully merged branch
 ```
