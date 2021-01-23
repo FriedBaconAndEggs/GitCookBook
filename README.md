@@ -160,7 +160,15 @@ git cherry-pick branch-with-latest-commit # copy the latest commit from a branch
 git cherry-pick <commit hash> # or copy a commit using its hash
 ```
 ### Revert commits
-TBD
+```bash
+# assume a branch: A <-- B  <-- C <-- D <-- (BCD)^-1, where (BCD)^-1 means the commit that reverts
+# changes in commits B, C, D
+git revert --no-commit D
+git revert --no-commit C
+git revert --no-commit B
+git commit -m 'Revert D C and B'
+# Remark: it doesn't work for merge commits
+```
 
 ### Resolve conflicts
 ```bash
